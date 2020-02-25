@@ -12,7 +12,7 @@ class Solution {
     List<TreeNode> list = new ArrayList<TreeNode>();
     public int deepestLeavesSum(TreeNode root) {
         if(root == null){
-            return ret;
+            return 0;
         }
         int depth = 0;
         findleave(root, depth);
@@ -20,7 +20,7 @@ class Solution {
         for (int i = 0; i < list.size(); i++) {
 			ret = ret + list.get(i).val;
 		}
-
+        return ret;
     }
     public void findleave(TreeNode node, int depth) {
         if (node == null){

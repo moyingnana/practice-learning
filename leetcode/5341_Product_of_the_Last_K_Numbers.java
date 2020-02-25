@@ -11,7 +11,9 @@ class ProductOfNumbers {
     public int getProduct(int k) {
         int ret = 1;
         for (int i=this.product.size()-1; i>=this.product.size()-k; i--){
-            ret = ret * this.product.get(i);
+            if (this.product.get(i) != 1){
+                ret = ret * this.product.get(i);
+            }
         }
         return ret;
     }
